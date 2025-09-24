@@ -1,0 +1,3 @@
+			Mohammed Ammar
+
+Hi.I'm front end developer who loves turning ideas into interactive, real-world web experiences. Over time,I've learing languages of the web including HTML,CSS,JavaScript,React.js,NOde.js and I use them to bulid everything from simple portfolios to fully function sites with payments, booking, memberships, dashboards,and more.For me, good design is not just about how it looks- it's about how it works,feels, and flows.I enjoy solving problems,learning new things, and bulinding websites that make people's lives a little easier(and a lot cooler)
