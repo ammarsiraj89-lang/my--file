@@ -6,23 +6,38 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
-      body {
+     /* ========================================= */
+/*                 GLOBAL                     */
+/* ========================================= */
+
+body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #eafaff;
   font-family: "Poppins", sans-serif;
 }
 
+/* Smooth animations */
+* {
+  transition: 0.3s ease;
+}
+
+/* Sticky Navbar */
 header {
   backdrop-filter: blur(12px);
   background: rgba(255,255,255,0.08);
   border-radius: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+/* Active navbar link */
 .nav-link.active {
   background: rgba(255,255,255,0.25) !important;
   color: white !important;
 }
 
+/* Main row box */
 .row {
   backdrop-filter: blur(20px);
   background: rgba(255,255,255,0.1);
@@ -30,47 +45,48 @@ header {
   padding: 20px;
 }
 
-.hero-image img {
-  filter: drop-shadow(0 0 12px #00e6ac);
-}
+/* Hero image glow */
 
+/* Section headings */
 section h1 {
   color: #00e6ac;
   text-align: left;
   margin-left: 50px;
   padding: 10px;
 }
-section p
-{
+
+section p {
   width: 70vw;
   padding-left: 10px;
   margin-left: 50px;
   text-align: justify;
-  justify-content: center;
   color: white;
 }
 
-/* === THEME 1: NEON DARK TECH === */
+
+/* ========================================= */
+/*         SERVICE SECTION — NEON TECH        */
+/* ========================================= */
 
 #featured-3 {
   color: #e4f1ff;
-  
 }
 
 #featured-3 h2 {
   margin-bottom: 20px;
   color: #00eaff;
-  text-shadow: 0 0 12px #00eaff;
+ 
   font-family: "Orbitron", sans-serif;
 }
 
+/* Service card */
 .feature {
   background: rgba(0, 238, 255, 0.05);
   border: 1px solid rgba(0, 238, 255, 0.2);
   padding: 25px;
   border-radius: 15px;
+  
   transition: 0.3s;
-  box-shadow: 0 0 25px rgba(0, 238, 255, 0.05);
 }
 
 .feature:hover {
@@ -80,7 +96,7 @@ section p
 
 .feature h3 {
   color: #00eaff;
-  text-shadow: 0 0 10px #00eaff;
+ 
   font-family: "Orbitron", sans-serif;
 }
 
@@ -96,60 +112,58 @@ section p
   box-shadow: 0 0 15px #00eaff;
 }
 
-/* === CONTACT SECTION — THEME 1: NEON DARK TECH === */
+
+/* ========================================= */
+/*      CONTACT SECTION — NEON TECH          */
+/* ========================================= */
 
 #contact {
   color: #e4f1ff;
   margin-top: 50px;
 }
 
-/* Title */
 #contact h2 {
   color: #00eaff;
-  text-shadow: 0 0 12px #00eaff;
+  
   font-family: "Orbitron", sans-serif;
-  border-color: rgba(0, 238, 255, 0.3) !important;
   margin-bottom: 40px;
 }
 
-/* Contact Info Box */
+/* Contact info box */
 .contact-box {
   background: rgba(0, 238, 255, 0.05);
   border: 1px solid rgba(0, 238, 255, 0.2);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 0 22px rgba(0, 238, 255, 0.08);
-  transition: 0.3s ease-in-out;
+ ;
 }
 
 .contact-box:hover {
-  box-shadow: 0 0 25px rgba(0, 238, 255, 0.4);
   transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.4);
 }
 
 .contact-box h3 {
   color: #00eaff;
-  text-shadow: 0 0 10px #00eaff;
+ 
   font-family: "Orbitron", sans-serif;
-  margin-bottom: 15px;
 }
 
 .contact-box p {
-  font-size: 15px;
   color: #d8ecff;
 }
 
-/* Contact Form Styling */
+/* Contact Form */
 .contact-form {
   background: rgba(0, 238, 255, 0.05);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 0 22px rgba(0, 238, 255, 0.08);
   border: 1px solid rgba(0, 238, 255, 0.2);
+ 
   backdrop-filter: blur(4px);
 }
 
-/* Input & Textarea */
+/* Inputs */
 .contact-form input,
 .contact-form textarea {
   background: rgba(0, 238, 255, 0.08);
@@ -161,8 +175,7 @@ section p
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #00eaff;
-  box-shadow: 0 0 10px #00eaff;
-  outline: none;
+ 
 }
 
 .contact-form input::placeholder,
@@ -170,17 +183,16 @@ section p
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Neon Button */
+/* Neon button */
 .btn-neon {
   padding: 10px 25px;
   background: #00eaff;
   color: #0a0f1f;
   border: none;
   border-radius: 10px;
-  font-weight: bold;
-  transition: 0.3s;
   width: 100%;
-  box-shadow: 0 0 15px #00eaff;
+  font-weight: bold;
+  
 }
 
 .btn-neon:hover {
@@ -189,124 +201,144 @@ section p
   box-shadow: 0 0 25px #ffae00;
 }
 
-/* === PROJECT SECTION — NEON DARK TECH === */
+
+/* ========================================= */
+/*            PROJECT SECTION                 */
+/* ========================================= */
 
 #custom-cards {
   margin-top: 60px;
   color: #e4f1ff;
 }
 
-/* Title */
 #custom-cards h2 {
-  margin-bottom: 20px;
   color: #00eaff;
-  text-shadow: 0 0 12px #00eaff;
+  margin-bottom: 20px;
   font-family: "Orbitron", sans-serif;
-  border-color: rgba(0, 238, 255, 0.3) !important;
 }
 
-/* Card Base */
+/* Project card */
 #custom-cards .card-cover {
   position: relative;
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  height: 100%;
   min-height: 380px;
-  box-shadow: 0 0 18px rgba(0, 238, 255, 0.2);
+ 
   overflow: hidden;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
-/* Dark Overlay for Readability */
 #custom-cards .card-cover::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 15, 25, 0.65);
+  background: rgba(0,15,25,0.65);
   backdrop-filter: blur(2px);
-  transition: 0.3s;
 }
 
-/* Hover Effects */
 #custom-cards .card-cover:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 35px rgba(0, 238, 255, 0.5);
 }
 
-#custom-cards .card-cover:hover::before {
-  background: rgba(0, 15, 25, 0.45);
-}
-
-/* Card Content */
 #custom-cards .card-cover h3 {
   color: #00eaff;
-  text-shadow: 0 0 10px #00eaff;
+ 
   font-family: "Orbitron", sans-serif;
 }
 
-/* Fix spacing inside cards */
 #custom-cards .card-cover .d-flex {
   z-index: 2;
   position: relative;
 }
 
-/* Responsive Fix */
+/* Tablet fix */
 @media (max-width: 768px) {
   #custom-cards .card-cover {
     min-height: 320px;
   }
-
-  #custom-cards h3 {
-    font-size: 26px;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  #contact h2 {
-    font-size: 28px;
-  }
-
-  .contact-box,
-  .contact-form {
-    margin-bottom: 20px;
-  }
 }
 
 
+/* ========================================= */
+/*                MOBILE 576px                */
+/* ========================================= */
 
-      /* Mobile Responsive (Bootstrap sm and below = 576px) */
 @media (max-width: 576px) {
 
   .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
     text-align: center;
     padding: 20px;
-    padding-top: 10px;
-    margin-top: 30px;
-
   }
 
   .hero-image {
     display: flex;
     justify-content: center;
-    margin-bottom: 70px; 
+    align-items: center;
+    margin: 30px 0;
   }
 
   .hero-image img {
-    width: 220px;   /* adjust size if needed */
+    width: 220px;
     border-radius: 100px;
   }
 
-  .container body {
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
+  .feature,
+  .card-cover {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  #contact .contact-box,
+  #contact .contact-form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header .nav {
+    justify-content: center;
+  }
+}
+
+
+/* ========================================= */
+/*                TABLET 768px                */
+/* ========================================= */
+
+@media (max-width: 768px) {
   .row {
-    flex-direction: column; /* stack vertically */
     text-align: center;
+  }
+
+  .feature {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* ========================================= */
+/*                DESKTOP FIX                */
+/* ========================================= */
+
+@media (min-width: 992px) {
+  .hero-text {
+    text-align: left;
   }
 }
 
@@ -374,21 +406,21 @@ section p
           <div class="feature col">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center              text-bg-primary bg-gradient fs-2 mb-3">
                </div>
-            <h3 class="fs-2 text-body-emphasis">HTML</h3>
+            <h3 class="fs-2">HTML</h3>
             <p>HTML stands for HyperText Markup Language.HTML is the foundational scripting language used by web browsers to display content on the World Wide Web. HyperText in HTML allows users to navigate the web by clicking links that redirect to new pages.It is used to structure web pages and their content. For example, content can be structured within paragraphs, lists, headings, links, images, tables, and more.</p> 
           </div>
           <div class="feature col">
             <div
               class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
               </div>
-            <h3 class="fs-2 text-body-emphasis">CSS</h3>
+            <h3 class="fs-2 ">CSS</h3>
             <p>CSS stands for Cascading Style Sheets. It’s used to style and layout HTML elements — changing things like colors, fonts, spacing, and positioning.CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.The three types of CSS are external, internal, and inline. External CSS is a file that HTML files will link to. Internal CSS is specified at the beginning of an HTML document. Inline CSS is written for a specific element in the HTML document.</p>
           </div>
           <div class="feature col">
             <div
               class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
               </div>
-            <h3 class="fs-2 text-body-emphasis">JavaScript</h3>
+            <h3 class="fs-2 ">JavaScript</h3>
             <p>JavaScript is a programming language used to make websites interactive. JavaScript is a powerful and widely-used programming language that allows you to add interactivity and dynamic behavior to web pages.The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads.</p> 
           </div>
         </div>
